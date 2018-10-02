@@ -14,7 +14,10 @@ app.get('/', function(req, res){
     to: '+19293105441',  // Text this number
     from: '+17147861082' // From a valid Twilio number
 })
-.then((message) => console.log(message.sid));
+.then((message) => {
+  console.log(message.sid);
+res.send(message.sid)
+});
 
 });
 
